@@ -11,4 +11,9 @@ public class RegistrationEventController {
 		return "home";
 	}
 
+	@RequestMapping("/registration-events")
+	public String form() {
+		return "event/formEvent";
+	}
+
 }
