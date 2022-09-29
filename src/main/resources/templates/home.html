@@ -10,6 +10,17 @@
 <body>
 
 	<h1>Olá Mundo Spring Boot Framework !!!</h1>
+	<h2>Lista de Eventos</h2>
+	<h3><a href="/registration-events">Cadastrar Evento</h3>
+	
+	<div th:each="event : ${events}">
+		<div class="row">
+			<p><span th:text="${event.name}"></span></p>
+			<p><span th:text="${event.location}"></span></p>
+			<p><span th:text="${event.date}"></span></p>
+			<p><span th:text="${event.time}"></span></p>
+		</div>
+	</div>
 
 </body>
 
