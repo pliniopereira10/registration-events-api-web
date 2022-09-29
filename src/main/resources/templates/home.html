@@ -4,24 +4,41 @@
 
 <head>
 	<title>Spring Thymeleaf</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Type" name="viewport"
+		content="text/html; width=device-width, initial-scale=1.0; charset=UTF-8;" />
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+
 </head>
 
 <body>
 
 	<h1>Olá Mundo Spring Boot Framework !!!</h1>
 	<h2>Lista de Eventos</h2>
-	<h3><a href="/registration-events">Cadastrar Evento</h3>
-	
-	<div th:each="event : ${events}">
-		<div class="row">
-			<p><span th:text="${event.name}"></span></p>
-			<p><span th:text="${event.location}"></span></p>
-			<p><span th:text="${event.date}"></span></p>
-			<p><span th:text="${event.time}"></span></p>
-		</div>
-	</div>
+	<h3><a class="waves-effect waves-light btn"><i class="material-icons right">add_circle_outline</i>Cadastrar
+			Evento</a></h3>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Local</th>
+				<th>Data</th>
+				<th>Horário</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="event : ${events}">
+				<td><span th:text="${event.name}"></span></td>
+				<td><span th:text="${event.location}"></span></td>
+				<td><span th:text="${event.date}"></span></td>
+				<td><span th:text="${event.time}"></span></td>
+			</tr>
+		</tbody>
+	</table>
 
+	<script type="text/javascript" src="jquerry-3.6.1.min/jquerry-3.6.1.min.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 </body>
 
 </html>
