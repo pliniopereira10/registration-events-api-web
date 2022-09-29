@@ -7,4 +7,6 @@ Sistema de cadastro de eventos e sua respectiva lista de convidados
 * Spring Thymeleaf
 * Spring Web
 * Spring DevTools
+* Spring Data JPA
+* MySQL Driver
 
