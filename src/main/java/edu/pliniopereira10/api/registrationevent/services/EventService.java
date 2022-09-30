@@ -1,6 +1,7 @@
 package edu.pliniopereira10.api.registrationevent.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -23,6 +24,10 @@ public class EventService {
 
 	public List<EventModel> findAll() {
 		return eventRepository.findAll();
+	}
+
+	public Optional<EventModel> findById(long id) {
+		return eventRepository.findById(id);
 	}
 
 }
