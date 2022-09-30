@@ -34,12 +34,12 @@ public class RegistrationEventController {
 
 	@GetMapping("/registration-events")
 	public String form() {
-		return "event/formEvents";
+		return "event/save-event";
 	}
 
 	@GetMapping("/list-events")
 	public ModelAndView events() {
-		ModelAndView modelAndView = new ModelAndView("/event/listEvents");
+		ModelAndView modelAndView = new ModelAndView("/event/list-events");
 		List<EventModel> events = eventService.findAll();
 		modelAndView.addObject("events", events);
 
