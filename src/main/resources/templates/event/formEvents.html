@@ -3,19 +3,28 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
 <head>
+
 	<title>Spring Thymeleaf</title>
+	
 	<meta http-equiv="Content-Type" name="viewport"
 		content="text/html; width=device-width, initial-scale=1.0; charset=UTF-8" />
 
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
+	
 </head>
 
 <body>
 
-	<h1>Cadastro de Eventos:</h1>
-	<a href="/events" class="waves-effect waves-light btn"><i class="material-icons right">format_list_bulleted</i>Lista
+	<h1>Olá Mundo Spring Boot Framework !!!</h1>
+	
+	<a href="/" class="waves-effect waves-light btn"><i class="material-icons right">home</i>Home</a>
+	<a href="/list-events" class="waves-effect waves-light btn"><i
+			class="material-icons right">format_list_bulleted</i>Lista
 		de Eventos</a>
+		
+	<h2>Cadastro de Eventos:</h2>
+	
 	<form class="container" method="post">
 		Nome: <input type="text" value="" name="name" />
 		<div class="row">
@@ -37,6 +46,7 @@
 
 	<script type="text/javascript" src="jquerry-3.6.1.min/jquerry-3.6.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
+	
 </body>
 
 </html>

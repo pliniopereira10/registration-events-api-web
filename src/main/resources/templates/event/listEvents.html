@@ -3,6 +3,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
+
 	<title>Spring Thymeleaf</title>
 	
 	<meta http-equiv="Content-Type" name="viewport"
@@ -16,13 +17,32 @@
 <body>
 
 	<h1>Olá Mundo Spring Boot Framework !!!</h1>
-	
-	<a href="/list-events" class="waves-effect waves-light btn"><i
-			class="material-icons right">format_align_justify</i>Lista
-		de Eventos</a>
+
+	<a href="/" class="waves-effect waves-light btn"><i class="material-icons right">home</i>Home</a>
 	<a href="/registration-events" class="waves-effect waves-light btn"><i
 			class="material-icons right">add_circle_outline</i>Cadastrar
 		Evento</a>
+
+	<h2>Lista de Eventos</h2>
+
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Local</th>
+				<th>Data</th>
+				<th>Horário</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="event : ${events}">
+				<td><span th:text="${event.name}"></span></td>
+				<td><span th:text="${event.location}"></span></td>
+				<td><span th:text="${event.date}"></span></td>
+				<td><span th:text="${event.time}"></span></td>
+			</tr>
+		</tbody>
+	</table>
 
 	<script type="text/javascript" src="jquerry-3.6.1.min/jquerry-3.6.1.min.js"></script>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
