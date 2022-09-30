@@ -4,24 +4,38 @@
 
 <head>
 	<title>Spring Thymeleaf</title>
-	<meta http-equiv="Content-Type" name="viewport" 
+	<meta http-equiv="Content-Type" name="viewport"
 		content="text/html; width=device-width, initial-scale=1.0; charset=UTF-8" />
+
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
 </head>
 
 <body>
 
 	<h1>Cadastro de Eventos:</h1>
-	<form method="post">
+	<a href="/events" class="waves-effect waves-light btn"><i class="material-icons right">format_list_bulleted</i>Lista
+		de Eventos</a>
+	<form class="container" method="post">
 		Nome: <input type="text" value="" name="name" />
-		Local: <input type="text" value="" name="location" />
-		Data: <input type="date" value="" name="date" />
-		Horário: <input type="text" value="" name="time" />
+		<div class="row">
+			<div class="input-field col s6">
+				Local: <input type="text" value="" name="location" />
+			</div>
+			<div class="input-field col s3">
+				Data: <input type="date" value="" name="date" />
+			</div>
+			<div class="input-field col s3">
+				Horário: <input type="text" value="" name="time" />
+			</div>
+		</div>
 
-		<button type="submit">Salvar</button>
+		<button class="btn waves-effect waves-light" type="submit" name="action">Salvar<i
+				class="material-icons right">send</i>
+		</button>
 	</form>
 
+	<script type="text/javascript" src="jquerry-3.6.1.min/jquerry-3.6.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 
