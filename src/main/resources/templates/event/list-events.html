@@ -5,7 +5,7 @@
 <head>
 
 	<title>Spring Thymeleaf</title>
-	
+
 	<meta http-equiv="Content-Type" name="viewport"
 		content="text/html; width=device-width, initial-scale=1.0; charset=UTF-8;" />
 
@@ -36,7 +36,8 @@
 		</thead>
 		<tbody>
 			<tr th:each="event : ${events}">
-				<td><span th:text="${event.name}"></span></td>
+				<td><a th:href="${(#mvc.url('REC#eventDetail').arg(0, event.id)).build()}"><span
+							th:text="${event.name}"></span></a></td>
 				<td><span th:text="${event.location}"></span></td>
 				<td><span th:text="${event.date}"></span></td>
 				<td><span th:text="${event.time}"></span></td>
@@ -46,7 +47,7 @@
 
 	<script type="text/javascript" src="jquerry-3.6.1.min/jquerry-3.6.1.min.js"></script>
 	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-	
+
 </body>
 
 </html>
